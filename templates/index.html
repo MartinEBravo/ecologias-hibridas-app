@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generar Imagen</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        body {
+            text-align: center; /* Centra el contenido en el cuerpo de la página */
+            background-color: #f0f0f0; /* Cambia el color de fondo */
+            font-family: Arial, sans-serif; /* Cambia la fuente del texto */
+        }
+
+        h1 {
+            color: #333; /* Cambia el color del encabezado */
+        }
+
+        form {
+            margin: 20px auto; /* Centra el formulario horizontalmente */
+            padding: 20px;
+            background-color: #fff; /* Cambia el color de fondo del formulario */
+            border-radius: 10px; /* Agrega esquinas redondeadas al formulario */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agrega una sombra al formulario */
+            width: 50%; /* Establece el ancho del formulario */
+        }
+
+        label {
+            display: block; /* Coloca las etiquetas en líneas separadas */
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%; /* Ocupa todo el ancho disponible */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc; /* Agrega un borde al campo de entrada */
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF; /* Cambia el color del botón */
+            color: #fff; /* Cambia el color del texto del botón */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        img {
+            margin-top: 20px; /* Agrega un margen superior a la imagen */
+            max-width: 100%; /* Ajusta el ancho máximo de la imagen al contenedor */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Generar Imagen</h1>
+    <form method="POST" action="/generate">
+        <label for="prompt">Ingrese un prompt:</label>
+        <input type="text" id="prompt" name="prompt" required>
+        <button type="submit">Generar</button>
+    </form>
+    <img src="{{ image_url }}" alt="Generated Image">
+</body>
+</html>
